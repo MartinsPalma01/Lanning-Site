@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Painel Administrativo | Lanning Amaral Advogados</title>
+  <meta name="description" content="Área interna protegida do Lanning Amaral Advogados.">
+  <meta name="keywords" content="advogado em Jaciara MT, advocacia Jaciara MT, direito previdenciário Jaciara, advogado trabalhista Jaciara, direito rural Mato Grosso, advogado família Jaciara, advogado bancário Jaciara, escritório de advocacia Jaciara">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="theme-color" content="#073845">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Painel Administrativo | Lanning Amaral Advogados">
+  <meta property="og:description" content="Área interna protegida do Lanning Amaral Advogados.">
+  <meta property="og:image" content="assets/img/office-wall.webp">
+  <link rel="icon" href="assets/img/logo-main.png">
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body data-page="admin">
+    <section class="admin-app">
+      <div class="admin-login-card" data-admin-login>
+        <img src="assets/img/logo-main.png" alt="Lanning Amaral Advogados">
+        <h1>Painel administrativo</h1>
+        <p>Acesso interno para gestão de conteúdo, equipe, contatos e base administrativa do escritório.</p>
+        <label>E-mail <input type="email" data-admin-email autocomplete="username" value="admin@lanningamaral.local"></label>
+        <label>Senha <input type="password" data-admin-password autocomplete="current-password"></label>
+        <button class="button button-accent" type="button" data-admin-enter>Entrar</button><p class="form-status" data-admin-status></p>
+      </div>
+      <div class="admin-layout" data-admin-panel hidden>
+        <aside class="admin-sidebar"><img src="assets/img/logo-main.png" alt="Lanning Amaral Advogados"><button data-admin-tab="dashboard" class="is-active">Dashboard</button><button data-admin-tab="profissionais">Profissionais</button><button data-admin-tab="areas">Áreas</button><button data-admin-tab="textos">Textos públicos</button><button data-admin-tab="faq">FAQ</button><button data-admin-tab="artigos">Artigos</button><button data-admin-tab="contato">Contato</button><button data-admin-tab="midias">Mídias e SEO</button><button data-admin-tab="whatsapp">WhatsApp e chatbot</button><button data-admin-tab="leads">Contatos recebidos</button><button data-admin-tab="base">Base interna</button></aside>
+        <main class="admin-main">
+          <section class="admin-view is-active" data-admin-view="dashboard"><h2>Dashboard</h2><div class="admin-kpis" data-admin-kpis></div></section>
+          <section class="admin-view" data-admin-view="profissionais"><h2>Cadastro de profissionais</h2><div class="admin-two"><div class="admin-list" data-professional-list></div><form class="admin-form" data-professional-form></form></div></section>
+          <section class="admin-view" data-admin-view="areas"><h2>Áreas de atuação</h2><p>Edite departamentos, subáreas, ordem de exibição e responsável preferencial.</p><textarea data-json-field="areas" rows="20"></textarea><button class="button button-accent" data-save-json="areas" type="button">Salvar áreas</button></section>
+          <section class="admin-view" data-admin-view="textos"><h2>Textos das páginas públicas</h2><textarea data-json-field="pageTexts" rows="12"></textarea><button class="button button-accent" data-save-json="pageTexts" type="button">Salvar textos</button></section>
+          <section class="admin-view" data-admin-view="faq"><h2>Perguntas frequentes</h2><textarea data-json-field="faq" rows="16"></textarea><button class="button button-accent" data-save-json="faq" type="button">Salvar FAQ</button></section>
+          <section class="admin-view" data-admin-view="artigos"><h2>Artigos do blog</h2><textarea data-json-field="articles" rows="16"></textarea><button class="button button-accent" data-save-json="articles" type="button">Salvar artigos</button></section>
+          <section class="admin-view" data-admin-view="contato"><h2>Dados de contato</h2><div class="admin-grid"><label>Nome do escritório <input data-config-path="office.name"></label><label>Endereço <input data-config-path="office.address"></label><label>CEP <input data-config-path="office.cep"></label><label>Horário <input data-config-path="office.hours"></label><label>WhatsApp principal <input data-config-path="office.whatsappPrincipal"></label><label>Mapa incorporado <input data-config-path="office.mapEmbed"></label></div><button class="button button-accent" data-save-basic type="button">Salvar contato</button></section>
+          <section class="admin-view" data-admin-view="midias"><h2>Logo, fotos, imagens e SEO</h2><div class="admin-grid"><label>Logo principal <input type="file" data-upload-key="logoPrincipal" accept="image/*"></label><label>Imagem institucional <input type="file" data-upload-key="imagemInstitucional" accept="image/*"></label><label>Timbrado <input type="file" data-upload-key="timbrado"></label><label>Título SEO da home <input data-config-path="seo.homeTitle"></label></div><p class="muted">Arquivos enviados neste painel ficam armazenados localmente neste navegador para pré-visualização administrativa. Em produção, devem ser gravados em servidor privado.</p></section>
+          <section class="admin-view" data-admin-view="whatsapp"><h2>WhatsApp e chatbot</h2><textarea data-json-field="chatbotRouting" rows="12"></textarea><button class="button button-accent" data-save-json="chatbotRouting" type="button">Salvar regras</button></section>
+          <section class="admin-view" data-admin-view="leads"><h2>Contatos recebidos</h2><div class="button-row"><button class="button button-primary" data-export-contacts type="button">Exportar CSV</button><button class="button button-ghost-dark" data-clear-contacts type="button">Limpar registros locais</button></div><div class="contacts-table" data-contacts-table></div></section>
+          <section class="admin-view" data-admin-view="base"><h2>Base interna do escritório</h2><p>Conteúdo administrativo visível apenas após login.</p><textarea data-json-field="internalBase" rows="18"></textarea><button class="button button-accent" data-save-json="internalBase" type="button">Salvar base interna</button></section>
+        </main>
+      </div>
+    </section>
+    <script src="assets/js/admin-config.js"></script><script src="assets/js/admin.js"></script></body></html>
